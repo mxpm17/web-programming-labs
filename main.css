@@ -15,14 +15,14 @@ header .info{
 }
 
 header h1 {
-    background-color: #e0ffe0;
+    background-color: #b1aec2;
     color: #333;
     margin: 0;
     padding: 20px 0 20px 15px;
 }
 
 nav {
-    background-color: #e0ffe0;
+    background-color: #b1aec2;
     padding: 10px;
 }
 
@@ -51,7 +51,7 @@ nav ul li a {
     transition: all 300ms;
 }
 nav ul li a:hover {
-    color: #4a0;
+    color: #eee;
 }
 
 nav .searchbox{
@@ -98,7 +98,7 @@ main {
 }
 
 .card:hover {
-    box-shadow: 0 0 7px #ada;
+    box-shadow: 0 0 7px #eee;
 }
 
 .card a:hover {
