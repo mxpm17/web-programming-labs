@@ -14,6 +14,16 @@
                 return false;
             }
 
+            function topboy() {
+                alert("НЕ НАДО СЮДА ЗВОНИТЬ, ПЖ");
+                return false;
+            }
+
+            function notcar() {
+                alert("Нет в наличии");
+                return false;
+            }
+
             function search() {
                 let name = document.getElementById('search').value;
                 let productNumber = null;
@@ -50,7 +60,7 @@
     <body onload="loaded()">
         <header>
             Магазин у КамриВода, находимся по адресу болотная площадь, парк репинский сквер
-            <div class="info">Телефон: 11-22-33</div>
+            <div class="info" onclick="return topboy()">Телефон: 11-22-33</div>
             <h1>Маркет</h1>
         </header>
         
@@ -70,7 +80,7 @@
         <d1>
 <main>
             <div class="card">
-                <a href="product1.html">
+                <a href="product1.html" onclick="return notcar()">
                     <div class="image"><img src="G4AAAgEWqeA-960.jpg"></div>
                     <div class="product-name">Camry70</div>
                     <div class="price">500.000.0 &#8381</div>
@@ -80,7 +90,7 @@
             </div>
 
             <div class="card">
-                <a href="product2.html">
+                <a href="product2.html" onclick="return notcar()">
                     <div class="image"><img src="camry50.jpg"></div>
                     <div class="product-name">Camry50</div>
                     <div class="price">500.000 &#8381</div>
@@ -90,7 +100,7 @@
             </div>
 
             <div class="card">
-                <a href="product3.html">
+                <a href="product3.html" onclick="return notcar()">
                     <div class="image"><img src="camry40.jpg"></div>
                     <div class="product-name">Camry40</div>
                     <div class="price">500.000 &#8381</div>
