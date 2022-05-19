@@ -79,6 +79,41 @@ function generateMenu() {
     }
 }
 
+function showProductInfo(product) {
+    showModal(`
+    <div><img src="${product.image}"</div>
+    <div>${product.name}></div>
+    <div>${product.price} &#8381;</div>
+    `);
+}
+
+function generateCard() {
+    let products = [
+        {image: 'camry40.jpg', name: 'Camry40', price: 1500000},
+        {image: 'camry50.jpg', name: 'Camry50', price: 1500000},
+        {image: '6234856026.jpg', name: 'Camry70', price: 1500000},
+    ];
+
+    let main = document.querySelector('main');
+    for(let product of products) {
+        let cardDiv = document.createElement('div');
+        cardDiv.className = 'card';
+        cardDiv.innerHTML = `
+        <a href="#">
+            <div class="image"><img src="${product.image}"></div>
+            <div class="product-name">${product.name}</div>
+            <div class="price">${product.price} &#8381;</div>
+        </a>
+        
+        `;
+        cardDiv.querySelector('a').addEventListener('click', function(){
+            showProductInfo(product);
+        });
+        main.append(cardDiv);
+    }
+}
+
+
 function loaded() {
     let searchbox = document.getElementById('search');
     searchbox.addEventListener('keydown',function(key) {
@@ -87,4 +122,7 @@ function loaded() {
     });
 
     generateMenu();
+    generateCard();
 }
+
+
